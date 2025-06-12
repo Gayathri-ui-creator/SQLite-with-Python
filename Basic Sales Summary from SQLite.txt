@@ -1,0 +1,18 @@
+#  Basic Sales Summary from SQLite Database Using Python
+
+## Objective
+To extract and visualize basic sales data such as total quantity sold and total revenue using SQL inside Python, and display it using a bar chart.
+
+## Files Included
+- `sales_data.db`: SQLite database containing sales data
+- `SQLite&python.ipynb`: Jupyter notebook script to query and visualize data
+- `sales_chart.png`: Bar chart output
+- `README.md`: This documentation
+
+## Summary of SQL Query
+```sql
+SELECT product, 
+       SUM(quantity) AS total_qty, 
+       SUM(quantity * price) AS revenue
+FROM sales
+GROUP BY product;
